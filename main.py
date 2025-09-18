@@ -32,6 +32,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.get("/health", tags=["meta"])
+def health():
+    return {"status": "ok"}
+
 
 # global http exception handler, to handle errors
 @app.exception_handler(StarletteHTTPException)
