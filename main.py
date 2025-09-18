@@ -17,10 +17,11 @@ app = FastAPI()
 app.include_router(pdfs.router)
 
 
-#origins = [
-#    "http://localhost:3000",
-#    "https://todo-frontend-khaki.vercel.app/",
-#]
+origins = [
+   "http://localhost:3000",
+   "http://127.0.0.1:3000",
+   "https://ejemplo-frontend-pdf.vercel.app",
+]
 
 # CORS configuration, needed for frontend development
 app.add_middleware(
